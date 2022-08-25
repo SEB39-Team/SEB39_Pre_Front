@@ -1,23 +1,12 @@
-import styled from 'styled-components';
-
-import SignupForm from './SignupForm';
-import Description from './Description';
+import * as S from './style';
+import { SignupForm, Description } from 'components';
 
 const SignUp = () => {
-  const Wrapper = styled.div`
-    display: flex;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    padding: 24px;
-    width: 100%;
-  `;
-
   return (
-    <Wrapper>
+    <S.Wrapper>
       <Description />
       <SignupForm />
-    </Wrapper>
+    </S.Wrapper>
   );
 };
 

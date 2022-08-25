@@ -8,4 +8,9 @@ export const GlobalStyle = createGlobalStyle`
   font-size: 62.5%;
   box-sizing: border-box;
 }
+
+:root {
+  --blue: rgb(10, 149, 255);
+  --gray: hsl(210, 8%, 45%);
+}
 `;

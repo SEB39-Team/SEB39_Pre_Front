@@ -1,7 +1,8 @@
+import { useNavigate } from 'react-router-dom';
+
 import styled from 'styled-components';
 
 import LoginForm from './LoginForm';
-
 import Logo from '../../assets/logo-stackoverflow.svg';
 
 const Wrapper = styled.div`
@@ -24,13 +25,17 @@ const Text = styled.div`
 `;
 
 const Login = () => {
+  const navigate = useNavigate();
+  const directToSignUp = () => {
+    navigate('/signup');
+  };
   return (
     <Wrapper>
       <img src={Logo} alt="stackoverflow logo" height={37} />
       <LoginForm />
       <Text>
         <span>{"Don't have an account ?"}</span>
-        <span> Sign Up</span>
+        <span onClick={directToSignUp}> Sign Up</span>
       </Text>
     </Wrapper>
   );

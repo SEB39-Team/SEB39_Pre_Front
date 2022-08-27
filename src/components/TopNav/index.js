@@ -1,7 +1,10 @@
 import * as S from './style';
 import logo from 'assets/imgs/logo.svg';
+import { useNavigate } from 'react-router';
 
 export default function TopNav() {
+  const navigate = useNavigate();
+
   return (
     <>
       <S.Container>
@@ -13,8 +16,8 @@ export default function TopNav() {
             <input placeholder="Search..." />
           </S.SearchCol>
           <S.SignCol>
-            <button>Log in</button>
-            <button>Sign up</button>
+            <button onClick={() => navigate('/login')}>Log in</button>
+            <button onClick={() => navigate('/signup')}>Sign up</button>
           </S.SignCol>
         </S.Inner>
       </S.Container>

@@ -18,6 +18,7 @@ export const Inner = styled.div`
 `;
 export const LogoCol = styled.div`
   display: flex;
+  cursor: pointer;
   flex: 2;
   img {
     width: 12rem;
@@ -36,6 +37,7 @@ export const SignCol = styled.div`
   display: flex;
   flex: 2;
   button {
+    cursor: pointer;
     height: 3rem;
   }
   button:first-child {

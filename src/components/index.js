@@ -5,3 +5,6 @@ export { default as Card } from './Card';
 export { default as Description } from './Description';
 export { default as LoginForm } from './LoginForm';
 export { default as SignupForm } from './SignupForm';
+export { default as QuestionBox } from './QuestionBox';
+export { default as Pagination } from './Pagination';
+export { default as Footer } from './Footer';

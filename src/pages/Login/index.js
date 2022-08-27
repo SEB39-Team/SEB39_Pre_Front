@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import LoginForm from 'components/LoginForm';
-import Logo from 'assets/logo.svg';
+import Logo from 'assets/imgs/logo.svg';
 import * as S from './style';
 
 const Login = () => {

@@ -50,3 +50,6 @@ export const SignCol = styled.div`
     border: 1px solid #0074cc;
   }
 `;
+export const Blank = styled.div`
+  height: 5.5rem;
+`;

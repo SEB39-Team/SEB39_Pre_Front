@@ -10,7 +10,7 @@ export default function TopNav() {
       <S.Container>
         <S.Inner>
           <S.LogoCol>
-            <img src={logo} />
+            <img src={logo} onClick={() => navigate('/')} />
           </S.LogoCol>
           <S.SearchCol>
             <input placeholder="Search..." />

@@ -1,12 +1,15 @@
 import * as S from './style';
-import { SignupForm, Description } from 'components';
+import { SignupForm, Description, TopNav } from 'components';
 
 const SignUp = () => {
   return (
-    <S.Wrapper>
-      <Description />
-      <SignupForm />
-    </S.Wrapper>
+    <>
+      <TopNav></TopNav>
+      <S.Wrapper>
+        <Description />
+        <SignupForm />
+      </S.Wrapper>
+    </>
   );
 };
 

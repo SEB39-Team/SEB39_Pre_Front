@@ -8,3 +8,6 @@ export { default as SignupForm } from './SignupForm';
 export { default as QuestionBox } from './QuestionBox';
 export { default as Pagination } from './Pagination';
 export { default as Footer } from './Footer';
+export { default as QuestionDetailHeader } from './QuestionDetailHeader';
+export { default as QuestionDetailBody } from './QuestionDetailBody';
+export { default as QuestionDetailForm } from './QuestionDetailForm';

@@ -1,8 +1,8 @@
 import * as S from './style';
 
-export default function QuestionBox() {
+export default function QuestionBox({ onClick }) {
   return (
-    <S.Layout>
+    <S.Layout onClick={onClick}>
       <S.LeftCol>
         <span>0 votes</span>
         <span>v 0 answers</span>

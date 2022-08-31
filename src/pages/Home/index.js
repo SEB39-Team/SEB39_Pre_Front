@@ -5,9 +5,7 @@ import { TopNav, LeftNav, QuestionBox, Pagination, Footer } from 'components';
 
 export default function Home() {
   const navigate = useNavigate();
-  const directToQuestion = () => {
-    navigate('/ask');
-  };
+
   return (
     <>
       <TopNav />
@@ -16,7 +14,7 @@ export default function Home() {
         <S.Main>
           <S.QuestionRow>
             <span>All Questions</span>
-            <button onClick={directToQuestion}>Ask Question</button>
+            <button onClick={() => navigate('/ask')}>Ask Question</button>
           </S.QuestionRow>
           <S.FilterRow>
             <span>123 questions</span>
@@ -33,7 +31,7 @@ export default function Home() {
           </S.FilterRow>
           {[...Array(15)].map((item, index) => (
             <React.Fragment key={index}>
-              <QuestionBox />
+              <QuestionBox onClick={() => navigate(`/questions/${index}`)} />
             </React.Fragment>
           ))}
           <Pagination />

@@ -4,21 +4,29 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /* align-items: center; */
   min-height: 100vh;
   width: 100vw;
-  padding: 0px 25px;
+  padding: 0px 5px;
 `;
 export const MainTitle = styled.h1`
   font-size: 3vmin;
   padding: 40px 0px;
+  margin-left: 30px;
 `;
+
+export const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0px 30px;
+  box-sizing: border-box;
+`;
+
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
   background: white;
-  width: 80%;
-
+  width: 70%;
   label {
     font-size: 15px;
     font-weight: bold;
@@ -43,6 +51,10 @@ export const Form = styled.form`
     padding: 10px;
     margin-top: 30px;
   }
+
+  @media screen and (max-width: 816px) {
+    width: 100%;
+  }
 `;
 
 export const Card = styled.div`
@@ -50,6 +62,7 @@ export const Card = styled.div`
   border-radius: 3px;
   padding: 24px;
   box-sizing: border-box;
+  background-color: white;
 
   div {
     margin: 5px 0px;

@@ -69,7 +69,6 @@ export const Body = styled.div`
   flex-direction: column;
 
   textarea {
-    height: 200px;
     display: block;
     font: inherit;
     font-size: 1.5rem;

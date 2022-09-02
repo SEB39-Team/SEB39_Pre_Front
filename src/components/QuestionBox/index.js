@@ -1,6 +1,6 @@
 import * as S from './style';
 
-export default function QuestionBox({ onClick }) {
+export default function QuestionBox(props, { onClick }) {
   return (
     <S.Layout onClick={onClick}>
       <S.LeftCol>
@@ -9,14 +9,8 @@ export default function QuestionBox({ onClick }) {
         <span>0 views</span>
       </S.LeftCol>
       <S.RightCol>
-        <S.Title>
-          Processing array of objects and presenting data in HTML
-        </S.Title>
-        <S.Content>
-          I have an array of objects that I have to process. I have a script
-          that displays data on a page using the ul and li tags. Screenshots
-          below shows what am I trying to do: When user clicks the button, ...
-        </S.Content>
+        <S.Title>{props.title}</S.Title>
+        <S.Content>{props.content}</S.Content>
         <S.Footer>
           <S.Tags>
             <button>javascript</button>

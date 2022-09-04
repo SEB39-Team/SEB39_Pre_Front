@@ -26,18 +26,18 @@ const Question = () => {
         formIsValid = true;
       }
       if (!formIsValid) {
-        return;
+        alert('Please fill the form');
       }
-      // eslint-disable-next-line
-      console.log(question);
+      alert('Success!');
 
       const response = await axios.post('/v1/posts', question);
-      // eslint-disable-next-line
-      console.log(response.data);
     } catch {
       // eslint-disable-next-line
       console.log('Error occured');
     }
+
+    titleRef.current.value = '';
+    contentRef.current.value = '';
   }
 
   return (

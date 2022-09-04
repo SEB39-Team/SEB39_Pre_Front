@@ -2,9 +2,11 @@ import React from 'react';
 import * as S from './style';
 import { useNavigate } from 'react-router';
 import { TopNav, LeftNav, QuestionBox, Pagination, Footer } from 'components';
+import { useBoardQuery } from 'hooks/useBoardQuery';
 
 export default function Home() {
   const navigate = useNavigate();
+  const { page, pageNum, setPageNum, limit, total } = useBoardQuery();
 
   return (
     <>
@@ -17,7 +19,7 @@ export default function Home() {
             <button onClick={() => navigate('/ask')}>Ask Question</button>
           </S.QuestionRow>
           <S.FilterRow>
-            <span>123 questions</span>
+            <span>{total} questions</span>
             <S.BtnCol>
               <button>Newest</button>
               <button>Active</button>
@@ -29,12 +31,15 @@ export default function Home() {
               <button>Filter</button>
             </S.BtnCol>
           </S.FilterRow>
-          {[...Array(15)].map((item, index) => (
-            <React.Fragment key={index}>
-              <QuestionBox onClick={() => navigate(`/questions/${index}`)} />
-            </React.Fragment>
+          {page.data.map((item) => (
+            <QuestionBox key={item.postId} board={item} />
           ))}
-          <Pagination />
+          <Pagination
+            total={total}
+            limit={limit}
+            page={pageNum}
+            setPage={setPageNum}
+          />
         </S.Main>
       </S.Container>
       <Footer />

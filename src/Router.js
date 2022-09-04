@@ -5,7 +5,7 @@ export default function Router() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/questions/:id" element={<QuestionDetail />} />
+      <Route path="/:id" element={<QuestionDetail />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/ask" element={<Question />} />

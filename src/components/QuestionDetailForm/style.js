@@ -23,6 +23,6 @@ export const Answer = styled.div`
   }
   button {
     width: 15rem;
-    margin-bottom: 2rem;
+    margin-bottom: 16rem;
   }
 `;

@@ -1,12 +1,10 @@
 import * as S from './style';
 
-export default function QuestionDetailHeader() {
+export default function QuestionDetailHeader({ title }) {
   return (
     <S.Header>
       <S.HeaderCol1>
-        <S.Title>
-          ESLint: TypeError: this.libOptions.parse is not a function
-        </S.Title>
+        <S.Title>{title}</S.Title>
         <S.AskBtn>Ask Question</S.AskBtn>
       </S.HeaderCol1>
       <S.HeaderCol2>

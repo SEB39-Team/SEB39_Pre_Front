@@ -1,16 +1,19 @@
+import { useNavigate } from 'react-router';
 import * as S from './style';
 
-export default function QuestionBox(props, { onClick }) {
+export default function QuestionBox({ board }) {
+  const navigate = useNavigate();
+
   return (
-    <S.Layout onClick={onClick}>
+    <S.Layout onClick={() => navigate(`${board.postId}`)}>
       <S.LeftCol>
         <span>0 votes</span>
         <span>v 0 answers</span>
         <span>0 views</span>
       </S.LeftCol>
       <S.RightCol>
-        <S.Title>{props.title}</S.Title>
-        <S.Content>{props.content}</S.Content>
+        <S.Title>{board.title}</S.Title>
+        <S.Content>{board.content}</S.Content>
         <S.Footer>
           <S.Tags>
             <button>javascript</button>

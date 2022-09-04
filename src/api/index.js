@@ -1,7 +1,9 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: 'http://localhost:8080',
+  headers: {
+    'Content-Type': 'application/json',
+  },
 });
 
 export const getPosts = async (pageNumber, size) => {
@@ -17,7 +19,7 @@ export const getPosts = async (pageNumber, size) => {
 export const getPostDetail = async (postId) => {
   try {
     const res = await apiClient.get(`/v1/posts/${postId}`);
-    return res.data;
+    return res.data.data;
   } catch (err) {
     throw new Error();
   }

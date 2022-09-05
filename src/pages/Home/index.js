@@ -1,7 +1,14 @@
 import React from 'react';
 import * as S from './style';
 import { useNavigate } from 'react-router';
-import { TopNav, LeftNav, QuestionBox, Pagination, Footer } from 'components';
+import {
+  TopNav,
+  LeftNav,
+  QuestionBox,
+  Pagination,
+  Footer,
+  Button,
+} from 'components';
 import { useBoardQuery } from 'hooks/useBoardQuery';
 
 export default function Home() {
@@ -16,7 +23,7 @@ export default function Home() {
         <S.Main>
           <S.QuestionRow>
             <span>All Questions</span>
-            <button onClick={() => navigate('/ask')}>Ask Question</button>
+            <Button onClick={() => navigate('/ask')}>Ask Question</Button>
           </S.QuestionRow>
           <S.FilterRow>
             <span>{total} questions</span>

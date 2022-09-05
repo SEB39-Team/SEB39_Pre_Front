@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
 export const AskBtn = styled.button`
-  background-color: #0074cc;
-  color: white;
-  border: none;
   width: 10rem;
   height: 4rem;
 `;

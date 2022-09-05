@@ -2,11 +2,10 @@ import styled from 'styled-components';
 
 export const ButtonComponent = styled.button`
   font: inherit;
-  margin-top: 10px;
+  margin: 10px 0px;
   border: 1px solid var(--blue);
   background: var(--blue);
   color: white;
-  padding: 0.75rem 3.5rem;
   cursor: pointer;
   font-size: 13px;
   font-weight: 600;

@@ -17,9 +17,7 @@ export const QuestionRow = styled.div`
     font-size: 3vmin;
   }
   button {
-    background-color: #0074cc;
-    color: white;
-    border: none;
+    padding: 5px 10px;
     width: 10rem;
     height: 4rem;
   }

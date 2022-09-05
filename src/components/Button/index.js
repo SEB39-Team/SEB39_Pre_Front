@@ -2,7 +2,7 @@ import * as S from './style';
 
 const Button = (props) => {
   return (
-    <S.ButtonComponent type={props.type || 'button'}>
+    <S.ButtonComponent onClick={props.onClick} type={props.type || 'button'}>
       {props.children}
     </S.ButtonComponent>
   );

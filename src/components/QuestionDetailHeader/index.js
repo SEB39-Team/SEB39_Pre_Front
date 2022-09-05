@@ -1,11 +1,15 @@
+import { useNavigate } from 'react-router';
+
+import Button from 'components/Button';
 import * as S from './style';
 
 export default function QuestionDetailHeader({ title }) {
+  const navigate = useNavigate();
   return (
     <S.Header>
       <S.HeaderCol1>
         <S.Title>{title}</S.Title>
-        <S.AskBtn>Ask Question</S.AskBtn>
+        <Button onClick={() => navigate('/ask')}>Ask Question</Button>
       </S.HeaderCol1>
       <S.HeaderCol2>
         <span>Asked</span>

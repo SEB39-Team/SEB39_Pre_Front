@@ -1,3 +1,4 @@
+import Button from 'components/Button';
 import * as S from './style';
 
 export default function QuestionDetailForm() {
@@ -5,7 +6,7 @@ export default function QuestionDetailForm() {
     <S.Answer>
       <p>Your Answer</p>
       <textarea />
-      <S.AskBtn>Post Your Answer</S.AskBtn>
+      <Button>Post Your Answer</Button>
     </S.Answer>
   );
 }

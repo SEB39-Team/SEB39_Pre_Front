@@ -43,8 +43,7 @@ const Question = () => {
 
       const response = await axios.post('/v1/posts', question);
     } catch {
-      // eslint-disable-next-line
-      console.log('Error occured');
+      alert('Error occured');
     }
 
     setFormSumitted(true);

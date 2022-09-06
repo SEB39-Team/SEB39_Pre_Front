@@ -36,7 +36,6 @@ const SignUpForm = () => {
       setIsLoading(true);
 
       const response = await axios.post('v1/members/join', signUpForm);
-      // eslint-disable-next-line
       alert('Success !');
     } catch {
       alert('Error occured !');

@@ -31,15 +31,12 @@ const LoginForm = () => {
         password: enteredPassword,
       });
       setIsLoading(false);
-      // eslint-disable-next-line
-      console.log(response);
+
       alert('Login Success!');
 
       const token = response.headers.authorization;
 
       authCtx.login(token);
-      // eslint-disable-next-line
-      console.log(token);
 
       navigate('/');
     } catch {

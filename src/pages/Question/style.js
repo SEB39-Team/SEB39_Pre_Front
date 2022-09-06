@@ -33,7 +33,7 @@ export const Form = styled.form`
   }
   input {
     display: block;
-    flex: 3;
+    /* flex: 3; */
     font: inherit;
     font-size: 1.5rem;
     padding: 0.35rem 0.35rem;

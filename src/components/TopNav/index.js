@@ -1,17 +1,20 @@
 import * as S from './style';
 import logo from 'assets/imgs/logo.svg';
+import { useContext } from 'react';
 import { useNavigate } from 'react-router';
+
+import AuthContext from 'store/auth-context';
 import Button from 'components/Button';
 
 export default function TopNav() {
+  const authCtx = useContext(AuthContext);
+
+  const isLoggedIn = authCtx.isLoggedIn;
+
   const navigate = useNavigate();
 
-  const directToLogin = () => {
-    navigate('/login');
-  };
-
-  const directToSignup = () => {
-    navigate('/signup');
+  const logoutHandler = () => {
+    authCtx.logout();
   };
 
   return (
@@ -24,10 +27,13 @@ export default function TopNav() {
           <S.SearchCol>
             <input placeholder="Search..." />
           </S.SearchCol>
-          <S.SignCol>
-            <Button onClick={() => navigate('/login')}>Log in</Button>
-            <Button onClick={() => navigate('/signup')}>Sign up</Button>
-          </S.SignCol>
+          {!isLoggedIn && (
+            <S.SignCol>
+              <Button onClick={() => navigate('/login')}>Log in</Button>
+              <Button onClick={() => navigate('/signup')}>Sign up</Button>
+            </S.SignCol>
+          )}
+          {isLoggedIn && <Button onClick={logoutHandler}>Logout</Button>}
         </S.Inner>
       </S.Container>
       <S.Blank />

@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
   ${reset}
   body,
   html {
-  font-size: 62.5%;
+  font-size: 70%;
   box-sizing: border-box;
 }
 

@@ -5,11 +5,12 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  min-height: 100vh;
+  height: 70vh;
   padding: 0px;
   margin-left: 20px;
   width: 30%;
   white-space: pre-wrap;
+  margin-bottom: 0;
 
   @media screen and (max-width: 816px) {
     display: none;

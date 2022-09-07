@@ -19,7 +19,7 @@
     "start": "cross-env NODE_PATH=src react-scripts start",
     "build": "cross-env NODE_PATH=src react-scripts build"
   },
-  "proxy": "http://ec2-13-209-14-158.ap-northeast-2.compute.amazonaws.com:8080",
+  "proxy": "http://ec2-3-35-140-129.ap-northeast-2.compute.amazonaws.com:8080",
   "browserslist": {
     "production": [
       ">0.2%",
